@@ -17,6 +17,12 @@ namespace SignASongKata.Core
 
         public string GenerateSong()
         {
+            if (!animals.Any())
+                throw new Exception("There is no animals!");
+
+            if (!animals.Contains("horse"))
+                throw new Exception("There is no horse!");
+
             var song = @"There was an old lady who swallowed a fly.
 I don't know why she swallowed a fly - perhaps she'll die!
 
