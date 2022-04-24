@@ -9,7 +9,7 @@ namespace song
     {
         static void Main(string[] args)
         {
-            var animals = new List<string>() { "fly", "spider", "bird", "cat", "dog", "cow" };
+            var animals = new List<string>() { "fly", "spider", "bird", "cat", "dog", "cow", "horse" };
             var songGenerator = new SongGenerator(animals);
             Console.WriteLine(songGenerator.GenerateSong());
         }
