@@ -111,5 +111,42 @@ There was an old lady who swallowed a horse...
             // Assert
             song.Should().Be(expected);
         }
+
+        [Fact]
+        public void GenerateSong_ShouldReturnTheHorseAndCowAndDogAndCat_WhenAnimalAreHorseAndCowAndDogAndCatAndBird()
+        {
+            // Arrange
+            var expected = @"There was an old lady who swallowed a bird;
+I don't know why she swallowed a bird - perhaps she'll die!
+
+There was an old lady who swallowed a cat;
+Fancy that to swallow a cat!
+She swallowed the cat to catch the bird,
+I don't know why she swallowed a bird - perhaps she'll die!
+
+There was an old lady who swallowed a dog;
+What a hog, to swallow a dog!
+She swallowed the dog to catch the cat,
+She swallowed the cat to catch the bird,
+I don't know why she swallowed a bird - perhaps she'll die!
+
+There was an old lady who swallowed a cow;
+I don't know how she swallowed a cow!
+She swallowed the cow to catch the dog,
+She swallowed the dog to catch the cat,
+She swallowed the cat to catch the bird,
+I don't know why she swallowed a bird - perhaps she'll die!
+
+There was an old lady who swallowed a horse...
+...She's dead, of course!";
+            var animals = new List<string>() { "bird", "cat", "dog", "cow", "horse" };
+            var sut = new SongGenerator(animals);
+
+            // Act
+            var song = sut.GenerateSong();
+
+            // Assert
+            song.Should().Be(expected);
+        }
     }
 }

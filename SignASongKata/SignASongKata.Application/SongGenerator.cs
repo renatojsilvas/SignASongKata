@@ -108,6 +108,33 @@ There was an old lady who swallowed a horse...
 ...She's dead, of course!";
             }
 
+            if (animals.Count == 5 && animals[0] == "bird" && animals[1] == "cat" && animals[2] == "dog" && animals[3] == "cow" && animals[4] == "horse")
+            {
+                song = @"There was an old lady who swallowed a bird;
+I don't know why she swallowed a bird - perhaps she'll die!
+
+There was an old lady who swallowed a cat;
+Fancy that to swallow a cat!
+She swallowed the cat to catch the bird,
+I don't know why she swallowed a bird - perhaps she'll die!
+
+There was an old lady who swallowed a dog;
+What a hog, to swallow a dog!
+She swallowed the dog to catch the cat,
+She swallowed the cat to catch the bird,
+I don't know why she swallowed a bird - perhaps she'll die!
+
+There was an old lady who swallowed a cow;
+I don't know how she swallowed a cow!
+She swallowed the cow to catch the dog,
+She swallowed the dog to catch the cat,
+She swallowed the cat to catch the bird,
+I don't know why she swallowed a bird - perhaps she'll die!
+
+There was an old lady who swallowed a horse...
+...She's dead, of course!";
+            }
+
             return song;
         }
     }
