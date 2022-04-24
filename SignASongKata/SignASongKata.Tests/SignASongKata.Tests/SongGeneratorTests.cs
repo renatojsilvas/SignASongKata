@@ -21,6 +21,22 @@ namespace SignASongKata.Tests
 
             // Assert
             song.Should().Be(goldenFileContent);
-        }       
+        }
+
+        [Fact]
+        public void GenerateSong_ShouldReturnTheHorse_WhenAnimalIsJustAHorse()
+        {
+            // Arrange
+            var expected = @"There was an old lady who swallowed a horse...
+...She's dead, of course!";
+            var animals = new List<string>() { "horse" };
+            var sut = new SongGenerator(animals);
+
+            // Act
+            var song = sut.GenerateSong();
+
+            // Assert
+            song.Should().Be(expected);
+        }
     }
 }
