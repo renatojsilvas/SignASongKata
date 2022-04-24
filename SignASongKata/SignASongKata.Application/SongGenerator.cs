@@ -68,7 +68,41 @@ There was an old lady who swallowed a horse...
         if (animals.Count == 2 && animals[0] == "cow" && animals[1] == "horse")
             {
                 song = @"There was an old lady who swallowed a cow;
-I don't know why she swallowed a fly - perhaps she'll die!
+I don't know why she swallowed a cow - perhaps she'll die!
+
+There was an old lady who swallowed a horse...
+...She's dead, of course!";
+            }
+
+            if (animals.Count == 3 && animals[0] == "dog" && animals[1] == "cow" && animals[2] == "horse")
+            {
+                song = @"There was an old lady who swallowed a dog;
+I don't know why she swallowed a dog - perhaps she'll die!
+
+There was an old lady who swallowed a cow;
+I don't know how she swallowed a cow!
+She swallowed the cow to catch the dog,
+I don't know why she swallowed a dog - perhaps she'll die!
+
+There was an old lady who swallowed a horse...
+...She's dead, of course!";
+            }
+
+            if (animals.Count == 4 &&  animals[0] == "cat" && animals[1] == "dog" && animals[2] == "cow" && animals[3] == "horse")
+            {
+                song = @"There was an old lady who swallowed a cat;
+I don't know why she swallowed a cat - perhaps she'll die!
+
+There was an old lady who swallowed a dog;
+What a hog, to swallow a dog!
+She swallowed the dog to catch the cat,
+I don't know why she swallowed a cat - perhaps she'll die!
+
+There was an old lady who swallowed a cow;
+I don't know how she swallowed a cow!
+She swallowed the cow to catch the dog,
+She swallowed the dog to catch the cat,
+I don't know why she swallowed a cat - perhaps she'll die!
 
 There was an old lady who swallowed a horse...
 ...She's dead, of course!";
