@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SignASongKata.Core;
+using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace song
@@ -48,9 +50,11 @@ I don't know why she swallowed a fly - perhaps she'll die!
 There was an old lady who swallowed a horse...
 ...She's dead, of course!";
 
-            File.WriteAllText(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"golden-file.txt"), song);
+           // File.WriteAllText(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"golden-file.txt"), song);
 
-            Console.WriteLine(song);
+            var animals = new List<string>() { "fly", "spider", "bird", "cat", "dog", "cow" };
+            var songGenerator = new SongGenerator(animals);
+            Console.WriteLine(songGenerator.GenerateSong());
         }
     }
 }
