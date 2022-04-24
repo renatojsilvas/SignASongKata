@@ -13,7 +13,7 @@ namespace SignASongKata.Tests
         {
             // Arrange
             var goldenFileContent = File.ReadAllText(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"Data\golden-file.txt"));
-            var animals = new List<string>() { "fly", "spider", "bird", "cat", "dog", "cow" };
+            var animals = new List<string>() { "fly", "spider", "bird", "cat", "dog", "cow", "horse" };
             var sut = new SongGenerator(animals);            
 
             // Act
@@ -21,6 +21,6 @@ namespace SignASongKata.Tests
 
             // Assert
             song.Should().Be(goldenFileContent);
-        }
+        }       
     }
 }
