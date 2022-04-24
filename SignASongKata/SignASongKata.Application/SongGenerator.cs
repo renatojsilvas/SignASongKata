@@ -65,6 +65,15 @@ There was an old lady who swallowed a horse...
 ...She's dead, of course!";
             }
 
+        if (animals.Count == 2 && animals[0] == "cow" && animals[1] == "horse")
+            {
+                song = @"There was an old lady who swallowed a cow;
+I don't know why she swallowed a fly - perhaps she'll die!
+
+There was an old lady who swallowed a horse...
+...She's dead, of course!";
+            }
+
             return song;
         }
     }
