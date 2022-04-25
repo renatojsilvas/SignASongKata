@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SignASongKata.Application\SignASongKata.Application.csproj" />
+    <ProjectReference Include="..\..\SignASongKata.Core\SignASongKata.Core.csproj" />
   </ItemGroup>
 
 </Project>
