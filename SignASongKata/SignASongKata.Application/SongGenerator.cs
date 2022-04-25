@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SignASongKata.Application;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,22 @@ namespace SignASongKata.Core
 
             if (!animals.Contains("horse"))
                 throw new Exception("There is no horse!");
+
+            var animals1 = AnimalFactory.ParseList(animals).ToList();
+
+            animals1.ForEach(a => a.ListOfAnimals = animals1);
+                
+
+            StringBuilder sb = new StringBuilder();
+            foreach (var item in animals1)
+            {
+                sb.AppendLine(item.Phrase);
+                sb.AppendLine();
+            }
+
+
+
+            return sb.Remove(sb.Length - 4, 4).ToString();
 
             var song = @"There was an old lady who swallowed a fly.
 I don't know why she swallowed a fly - perhaps she'll die!

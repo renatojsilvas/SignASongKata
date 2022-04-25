@@ -1,4 +1,5 @@
 using FluentAssertions;
+using SignASongKata.Application;
 using SignASongKata.Core;
 using System;
 using System.Collections.Generic;
@@ -68,7 +69,7 @@ I don't know why she swallowed a dog - perhaps she'll die!
 
 There was an old lady who swallowed a cow;
 I don't know how she swallowed a cow!
-She swallowed the cow to catch the dog,
+She swallowed the cow to catch the dog;
 I don't know why she swallowed a dog - perhaps she'll die!
 
 There was an old lady who swallowed a horse...
@@ -92,13 +93,13 @@ I don't know why she swallowed a cat - perhaps she'll die!
 
 There was an old lady who swallowed a dog;
 What a hog, to swallow a dog!
-She swallowed the dog to catch the cat,
+She swallowed the dog to catch the cat;
 I don't know why she swallowed a cat - perhaps she'll die!
 
 There was an old lady who swallowed a cow;
 I don't know how she swallowed a cow!
 She swallowed the cow to catch the dog,
-She swallowed the dog to catch the cat,
+She swallowed the dog to catch the cat;
 I don't know why she swallowed a cat - perhaps she'll die!
 
 There was an old lady who swallowed a horse...
@@ -122,20 +123,20 @@ I don't know why she swallowed a bird - perhaps she'll die!
 
 There was an old lady who swallowed a cat;
 Fancy that to swallow a cat!
-She swallowed the cat to catch the bird,
+She swallowed the cat to catch the bird;
 I don't know why she swallowed a bird - perhaps she'll die!
 
 There was an old lady who swallowed a dog;
 What a hog, to swallow a dog!
 She swallowed the dog to catch the cat,
-She swallowed the cat to catch the bird,
+She swallowed the cat to catch the bird;
 I don't know why she swallowed a bird - perhaps she'll die!
 
 There was an old lady who swallowed a cow;
 I don't know how she swallowed a cow!
 She swallowed the cow to catch the dog,
 She swallowed the dog to catch the cat,
-She swallowed the cat to catch the bird,
+She swallowed the cat to catch the bird;
 I don't know why she swallowed a bird - perhaps she'll die!
 
 There was an old lady who swallowed a horse...
@@ -159,20 +160,20 @@ I don't know why she swallowed a spider - perhaps she'll die!
 
 There was an old lady who swallowed a bird;
 How absurd to swallow a bird.
-She swallowed the bird to catch the spider,
+She swallowed the bird to catch the spider;
 I don't know why she swallowed a spider - perhaps she'll die!
 
 There was an old lady who swallowed a cat;
 Fancy that to swallow a cat!
 She swallowed the cat to catch the bird,
-She swallowed the bird to catch the spider,
+She swallowed the bird to catch the spider;
 I don't know why she swallowed a spider - perhaps she'll die!
 
 There was an old lady who swallowed a dog;
 What a hog, to swallow a dog!
 She swallowed the dog to catch the cat,
 She swallowed the cat to catch the bird,
-She swallowed the bird to catch the spider,
+She swallowed the bird to catch the spider;
 I don't know why she swallowed a spider - perhaps she'll die!
 
 There was an old lady who swallowed a cow;
@@ -180,7 +181,7 @@ I don't know how she swallowed a cow!
 She swallowed the cow to catch the dog,
 She swallowed the dog to catch the cat,
 She swallowed the cat to catch the bird,
-She swallowed the bird to catch the spider,
+She swallowed the bird to catch the spider;
 I don't know why she swallowed a spider - perhaps she'll die!
 
 There was an old lady who swallowed a horse...
