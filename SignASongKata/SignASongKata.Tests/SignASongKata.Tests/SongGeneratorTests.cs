@@ -1,5 +1,4 @@
 using FluentAssertions;
-using SignASongKata.Application;
 using SignASongKata.Core;
 using System;
 using System.Collections.Generic;
@@ -201,12 +200,11 @@ There was an old lady who swallowed a horse...
         {
             // Arrange
             var animals = new List<string>() { "cow" };
-            var sut = new SongGenerator(animals);
 
             // Act
             try
             {
-                var song = sut.GenerateSong();
+                var sut = new SongGenerator(animals);
                 Assert.True(false);
             }
             catch (Exception ex)
@@ -221,12 +219,11 @@ There was an old lady who swallowed a horse...
         {
             // Arrange
             var animals = new List<string>();
-            var sut = new SongGenerator(animals);
 
             // Act
             try
             {
-                var song = sut.GenerateSong();
+                var sut = new SongGenerator(animals);
                 Assert.True(false);
             }
             catch (Exception ex)

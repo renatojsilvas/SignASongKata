@@ -1,5 +1,5 @@
 ﻿using FluentAssertions;
-using SignASongKata.Application;
+using SignASongKata.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;

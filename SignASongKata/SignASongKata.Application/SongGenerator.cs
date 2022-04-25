@@ -1,41 +1,33 @@
-﻿using SignASongKata.Application;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SignASongKata.Core
 {
     public class SongGenerator
     {
-        private List<string> animals;
+        private readonly Animals animals;
 
         public SongGenerator(List<string> animals)
         {
-            this.animals = animals;
+            this.animals = new Animals(animals);
         }
 
         public string GenerateSong()
         {
-            if (!animals.Any())
-                throw new Exception("There is no animals!");
-
-            if (!animals.Contains("horse"))
-                throw new Exception("There is no horse!");
-
-            var animals1 = AnimalFactory.ParseList(animals).ToList();
-
-            animals1.ForEach(a => a.ListOfAnimals = animals1);               
-
-            StringBuilder sb = new StringBuilder();
-            foreach (var item in animals1)
+            var sb = new StringBuilder();
+            foreach (var item in animals.GetAnimals())
             {
                 sb.AppendLine(item.Phrase);
                 sb.AppendLine();
             }
+            return RemoveExtraSpacesAtTheEnd(sb.ToString());
+        }
 
-            return sb.Remove(sb.Length - 4, 4).ToString();
+        private string RemoveExtraSpacesAtTheEnd(string song)
+        {
+            return song.TrimEnd(new char[] { '\r', '\n' });
         }
     }
 }

@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace SignASongKata.Application
+namespace SignASongKata.Core
 {
     public abstract class Animal
     {
@@ -34,10 +32,28 @@ namespace SignASongKata.Application
 
         private bool IsGreaterAnimal() => ListOfAnimals.Count == 0 ? true : ListOfAnimals.Last().Size == Size;
         private bool IsSmallerAnimal() => ListOfAnimals.Count == 0 ? true : ListOfAnimals[0].Size == Size;
-        
-        protected abstract string GetPhraseWhenIsTheSmallest();
-        protected abstract string GetPhrase();
-        protected abstract string GetPhraseWhenIsTheGreatest();  
+
+        protected abstract string GetRhyme();
+
+        protected virtual string GetPhrase()
+        {
+            return @$"There was an old lady who swallowed a {Name};
+{GetRhyme()}
+{BuildSequenceOfAnimals()}
+I don't know why she swallowed a {SmallestAnimal.Name} - perhaps she'll die!";
+        }
+
+        protected virtual string GetPhraseWhenIsTheGreatest()
+        {
+            return @$"There was an old lady who swallowed a {Name}...
+...She's dead, of course!";
+        }
+
+        protected virtual string GetPhraseWhenIsTheSmallest()
+        {
+            return @$"There was an old lady who swallowed a {Name};
+I don't know why she swallowed a {Name} - perhaps she'll die!";
+        }
         protected virtual Animal SmallestAnimal => ListOfAnimals[0];
         protected virtual string BuildSequenceOfAnimals()
         {
@@ -51,7 +67,12 @@ namespace SignASongKata.Application
                 sb.Append(i == 1 ? ";": ",");
                 sb.AppendLine();
             }
-            return sb.ToString();
+            return RemoveExtraSpacesAtTheEnd(sb.ToString());
+        }
+
+        private string RemoveExtraSpacesAtTheEnd(string song)
+        {
+            return song.TrimEnd(new char[] { '\r', '\n' });
         }
     }
 }
